@@ -2,7 +2,7 @@ Package: missingGroupr
 Title: Count Missing Values by Group
 Version: 1.0.0
 Authors@R: 
-    person("Sasha", "Sharma", "sasha.sharma@stat.ubc.ca", role = c("aut", "cre"))
+    person(given = "Sasha", family = "Sharma", email = "sasha.sharma@stat.ubc.ca", role = c("aut", "cre"))
 Description: Provides a helper function that summarizes the number of
     missing values in all columns of a data frame when grouped by a
     specified column. This function wraps the dplyr verbs group_by(),
