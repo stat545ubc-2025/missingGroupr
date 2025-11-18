@@ -8,8 +8,8 @@
 
 The goal of missingGroupr is to provide a helper function that
 summarizes the number of missing values in all the columns when grouped
-by a specified column. The function wraps ‘dplyr::group_by()’,
-‘dplyr::summarize()’, and ‘dplyr::across()’ to compute missing-value
+by a specified column. The function wraps `dplyr::group_by()`,
+`dplyr::summarize()`, and `dplyr::across()` to compute missing-value
 counts.
 
 ## Installation
