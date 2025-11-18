@@ -6,12 +6,12 @@ Authors@R:
 Description: Provides a helper function that summarizes the number of
     missing values in all columns of a data frame when grouped by a
     specified column. This function wraps the dplyr verbs group_by(),
-    summarize(), and across() to compute missing-value counts.
+    summarize(), across(), and everything() to compute missing-value counts.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Imports: dplyr
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0), tibble
 Config/testthat/edition: 3
