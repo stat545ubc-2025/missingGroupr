@@ -1,0 +1,51 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# missingGroupr Package
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of missingGroupr is to provide a helper function that summarizes the number of missing values in all the columns when grouped by a specified column. The function wraps 'dplyr::group_by()', 'dplyr::summarize()', and 'dplyr::across()' to compute missing-value counts. 
+
+## Installation
+
+You can install the development version of missingGroupr from [GitHub](https://github.com/stat545ubc-2025/missingGroupr) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("stat545ubc-2025/missingGroupr")
+```
+
+## Examples
+
+This example computes the number of missing values in the `airquality` dataset grouped by the `Month` column.
+
+```{r example1}
+missingGroupr::count_all_missing_by_group(airquality, Month)
+```
+
+This example has the same output as the last example, but shows off an alternative way of invoking the `count_all_missing_by_group()`: piping the dataset into the function.
+
+```{r example2}
+airquality |> missingGroupr::count_all_missing_by_group(Month) 
+```
+
+The optional `.groups` argument allows us to keep the output grouped by the grouping column. See example below; notice how the output is a grouped tibble, rather than the ungrouped tibble output of the earlier examples.
+
+```{r example3}
+missingGroupr::count_all_missing_by_group(airquality, Month, .groups = "keep")
+```
+

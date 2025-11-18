@@ -31,7 +31,7 @@
 #' count_all_missing_by_group(airquality, Month)
 #' airquality |> count_all_missing_by_group(Month)
 #' count_all_missing_by_group(airquality, Month, .groups = "keep")
-#'
+#' @import dplyr
 #' @export
 count_all_missing_by_group <- function(data, group_col, .groups = "drop") {
 
